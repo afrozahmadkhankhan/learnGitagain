@@ -20,6 +20,7 @@ public class FrequencyFind {
 			}
 			
 		}
+        System.out.println("Done");
 		
 		
 	}
