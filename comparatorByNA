@@ -1,0 +1,68 @@
+package com.abc.gitadd;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.TreeSet;
+
+public class FrequencyFind {
+
+	public static void main(String[] args) {
+		ArrayList<Student> ar=new ArrayList();
+		ar.add(new Student("sfroz",24));
+		ar.add(new Student("khlia",20));
+		ar.add(new Student("rijwan",22));
+		System.out.println("unsorted");
+		for(int i=0;i<ar.size();i++)
+			System.out.println(ar.get(i));
+		
+		System.out.println("=======================");
+			Collections.sort(ar,new CompareName());
+			System.out.println("\nSort by name");
+			for(int i=0;i<ar.size();i++)
+			
+				System.out.println(ar.get(i));
+			
+			System.out.println("=======================");
+				Collections.sort(ar,new CompareAge());
+				System.out.println("\nSort by age");
+				for(int i=0;i<ar.size();i++)
+				
+					System.out.println(ar.get(i));
+	}
+
+}
+class Student 
+{
+	 String name;
+	 int age;
+	
+	public Student(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", age=" + age + "]";
+	}
+}
+class CompareName implements Comparator <Student>
+{
+	public int compare(Student  a,Student b)
+	{
+		 return a.name.compareTo(b.name);
+	}
+}
+
+class CompareAge implements Comparator <Student>
+{
+	public int compare(Student  a,Student b)
+	{
+		 return a.age-b.age;
+	}
+}
