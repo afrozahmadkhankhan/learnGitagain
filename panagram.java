@@ -50,8 +50,7 @@ public class FrequencyFind {
 	{
 		System.out.println("pan");
 	}
-		
-		
+		System.out.println("completed");	
     }     
 }
 
