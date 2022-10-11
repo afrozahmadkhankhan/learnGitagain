@@ -6,6 +6,7 @@ public class Alphanumeric {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+        System.out.println("Eneter the n1 and n2");
 		int n1 = scan.nextInt();
 		int n2 = scan.nextInt();
 		solve(n1, n2);
