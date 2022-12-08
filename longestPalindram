@@ -1,5 +1,3 @@
-package com.abc.gitadd;
-
 import java.util.Scanner;
 
 public class LongestPlaindram {
